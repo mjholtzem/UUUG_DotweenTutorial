@@ -12,14 +12,5 @@ public class SpriteSetterTween : MonoBehaviour
 
 	private void PlaySpriteSetterTween()
 	{
-		DOTween.To
-			(
-				() => spriteSetter.spriteIndex, //Getter
-				index => spriteSetter.spriteIndex = index, //Setter
-				spriteSetter.sprites.Length - 1, //Target
-				1 //Duration
-			)
-			.SetLoops(-1, LoopType.Restart)
-			.SetEase(Ease.Linear);
 	}
 }

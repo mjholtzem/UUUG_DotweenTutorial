@@ -13,6 +13,5 @@ public class MoveWithLoop : MonoBehaviour
 
 	private void PlayTweenWithLoop()
 	{
-		transform.DOMoveX(-.5f, .5f).SetEase(Ease.InOutQuad).SetLoops(-1, loopType);
 	}
 }

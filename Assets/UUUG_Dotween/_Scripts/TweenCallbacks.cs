@@ -27,31 +27,11 @@ public class TweenCallbacks : MonoBehaviour
 
 	private void Show()
 	{
-		target.DOScale(1, .25f).SetEase(Ease.OutBack)
-			.OnStart(() =>
-			{
-				target.gameObject.SetActive(true);
-				_isTweening = true;
-			})
-			.OnComplete(()=>
-			{
-				_isTweening = false;
-				_isShowing = true;
-			});
+		target.gameObject.SetActive(true);
 	}
 
 	private void Hide()
 	{
-		target.DOScale(0, .25f).SetEase(Ease.InBack)
-			.OnStart(() =>
-			{
-				_isTweening = true;
-			})
-			.OnComplete(() =>
-			{
-				target.gameObject.SetActive(false);
-				_isTweening = false;
-				_isShowing = false;
-			});
+		target.gameObject.SetActive(false);
 	}
 }
